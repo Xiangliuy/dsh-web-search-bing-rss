@@ -1,0 +1,3 @@
+name: Bing RSS 搜索
+description: 基于 Bing 公开 RSS 端点（?format=rss）的免费联网搜索，无需 API key。注册 bing-rss search provider 到 ctx.web，与 DeepSeek 官方 provider 并存，无 key 时自动选中。
+order: 5

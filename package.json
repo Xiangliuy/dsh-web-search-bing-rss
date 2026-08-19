@@ -1,0 +1,21 @@
+{
+  "name": "@deepseek-ai/dsh-web-search-bing-rss",
+  "description": "Bing RSS search provider for the DeepSeek Harness web capability seam (ctx.web) — free, no API key, uses Bing's public ?format=rss endpoint",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./provider": {
+      "default": "./lib/provider.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/provider.js"
+  ],
+  "license": "MIT"
+}
