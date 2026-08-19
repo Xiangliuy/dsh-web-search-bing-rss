@@ -13,5 +13,8 @@ Desktop.ini
 *.swo
 *~
 
+# Temporary scripts
+download-gh.mjs
+
 # Test artifacts
 *.log
