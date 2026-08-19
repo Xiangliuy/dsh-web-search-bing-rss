@@ -43,8 +43,7 @@ dsh-web-search-bing-rss/
 将插件安装为 DSH agent preset，在新建会话的预设选择器中选择「Bing RSS 搜索」。
 
 ```powershell
-# 在项目目录执行
-cd G:\dsh工作空间\dsh-web-search-bing-rss
+# 在项目根目录执行（clone 后）
 .\install.ps1
 ```
 
@@ -57,12 +56,13 @@ cd G:\dsh工作空间\dsh-web-search-bing-rss
 ### 方式二：手动复制
 
 ```powershell
+# 在本项目根目录下执行
 $preset = "$env:USERPROFILE\.dsh\.agent-presets\bing-rss-search"
 New-Item -ItemType Directory -Path $preset -Force
-Copy-Item "G:\dsh工作空间\dsh-web-search-bing-rss\lib\entry.mjs" "$preset\entry.mjs"
-Copy-Item "G:\dsh工作空间\dsh-web-search-bing-rss\lib\provider.js" "$preset\provider.mjs"
-Copy-Item "G:\dsh工作空间\dsh-web-search-bing-rss\agent.cordis.yml" "$preset\agent.cordis.yml"
-Copy-Item "G:\dsh工作空间\dsh-web-search-bing-rss\preset.yml" "$preset\preset.yml"
+Copy-Item ".\lib\entry.mjs"      "$preset\entry.mjs"
+Copy-Item ".\lib\provider.js"    "$preset\provider.mjs"
+Copy-Item ".\agent.cordis.yml"   "$preset\agent.cordis.yml"
+Copy-Item ".\preset.yml"         "$preset\preset.yml"
 ```
 
 ## 配置
@@ -90,7 +90,7 @@ Copy-Item "G:\dsh工作空间\dsh-web-search-bing-rss\preset.yml" "$preset\prese
 ## 测试
 
 ```powershell
-cd G:\dsh工作空间\dsh-web-search-bing-rss
+# 在项目根目录执行
 node lib/test-provider.mjs
 ```
 
